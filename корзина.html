@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - LesFixIt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">X</div>
+                <span>LESFIXIT</span>
+            </a>
+        </div>
+                    <div class="nav-center">
+                <div class="search-wrapper">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="topNavSearch" placeholder="Поиск руководств и форумов...">
+                        <span class="search-key">/</span>
+                    </div>
+                    <div class="search-suggestions" id="topNavSuggestions"></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="icon-link">🌐</a>
+            <a href="корзина.html" class="icon-link active">🛒</a>
+            <a href="профиль.html" class="icon-link">👤</a>
+        </div>
+    </nav>
+    <main class="content">
+        <h1 class="page-title">Ваша корзина</h1>
+        
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="img/ea3d738cc68a2f95c117419b2e9ffb41168d585d_original.jpeg" alt="Набор инструментов">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>Набор инструментов для ремонта электроники (64 биты)</h3>
+                        <p class="item-status">В наличии</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="qty-btn">-</button>
+                        <span>1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <div class="cart-item-price">3 490 ₽</div>
+                    <button class="delete-item-btn"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="img/39827.jpg" alt="Аккумулятор">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>Оригинальный аккумулятор для iPhone 13</h3>
+                        <p class="item-status">В наличии</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="qty-btn">-</button>
+                        <span>2</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <div class="cart-item-price">4 180 ₽</div>
+                    <button class="delete-item-btn"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h3>Итого</h3>
+                <div class="summary-line">
+                    <span>Товары (3 шт)</span>
+                    <span>7 670 ₽</span>
+                </div>
+                <div class="summary-line">
+                    <span>Доставка</span>
+                    <span class="free-shipping">Бесплатно</span>
+                </div>
+                <hr>
+                <div class="summary-line total">
+                    <span>К оплате</span>
+                    <span>7 670 ₽</span>
+                </div>
+                <button class="checkout-btn">Перейти к оформлению</button>
+                <a href="index.html" class="continue-shopping">Продолжить покупки</a>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Поддержка</h4>
+                <a href="#">Обсудить iFixit</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Новостная лента</a>
+            </div>
+            <div class="footer-col">
+                <h4>Новости</h4>
+                <a href="#">Принять участие</a>
+                <a href="#">Оптовый магазин</a>
+                <a href="#">Торговый локатор</a>
+            </div>
+            <div class="footer-col">
+                <h4>Специальные возможности</h4>
+                <a href="#">Imprint</a>
+                <a href="#">Конфиденциально</a>
+                <a href="#">Условия</a>
+            </div>
+            <div class="footer-badges">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-lang">Справка и помощь 🌐</div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-vk"></i></a>
+            </div>
+        </div>
+        <div class="footer-logo-area">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaa8WBGt9SVg0iOA5MXyf6wlPtVwT-6pnhIg&s" alt="Кулак">
+            <p>Ремонт — это благородно</p>
+        </div>
+    </footer>
+</body>
+</html>

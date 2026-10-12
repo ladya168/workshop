@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - LesFixIt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">X</div>
+                <span>LESFIXIT</span>
+            </a>
+        </div>
+            <div class="nav-center">
+                <div class="search-wrapper">
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="topNavSearch" placeholder="Поиск руководств и форумов...">
+                        <span class="search-key">/</span>
+                    </div>
+                    <div class="search-suggestions" id="topNavSuggestions"></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="icon-link">🌐</a>
+            <a href="корзина.html" class="icon-link">🛒</a>
+            <a href="профиль.html" class="icon-link active">👤</a>
+        </div>
+    </nav>
+    <main class="content">
+        <div class="profile-layout">
+            <aside class="profile-sidebar">
+                <div class="user-avatar-block">
+                    <div class="avatar-placeholder">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3>Алексей Радянский</h3>
+                    <p>На сайте с мая 2020</p>
+                </div>
+                <nav class="sidebar-menu">
+                    <a href="#" class="menu-link active"><i class="fa-regular fa-address-card"></i> Личные данные</a>
+                    <a href="#" class="menu-link"><i class="fa-solid fa-box-open"></i> Мои заказы</a>
+                    <a href="#" class="menu-link"><i class="fa-regular fa-newspaper"></i> Мои статьи и гайды</a>
+                    <a href="#" class="menu-link"><i class="fa-solid fa-gear"></i> Настройки</a>
+                    <a href="index.html" class="menu-link logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Выйти</a>
+                </nav>
+            </aside>
+            <section class="profile-main">
+                <h1 class="page-title">Личные данные</h1>
+                <form class="profile-form" onsubmit="event.preventDefault(); alert('Данные сохранены!');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Имя</label>
+                            <input type="text" value="Алеусей">
+                        </div>
+                        <div class="form-group">
+                            <label>Фамилия</label>
+                            <input type="text" value="Радянский">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" value="alex_fixit@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" value="+7 (999) 123-45-67">
+                    </div>
+                    <hr class="form-divider">
+                    <h3>Изменить пароль</h3>
+                    <div class="form-group">
+                        <label>Текущий пароль</label>
+                        <input type="password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label>Новый пароль</label>
+                        <input type="password" placeholder="Введите новый пароль">
+                    </div>
+                    <button type="submit" class="blue-save-btn">Сохранить изменения</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Поддержка</h4>
+                <a href="#">Обсудить iFixit</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Новостная лента</a>
+            </div>
+            <div class="footer-col">
+                <h4>Новости</h4>
+                <a href="#">Принять участие</a>
+                <a href="#">Оптовый магазин</a>
+                <a href="#">Торговый локатор</a>
+            </div>
+            <div class="footer-col">
+                <h4>Специальные возможности</h4>
+                <a href="#">Imprint</a>
+                <a href="#">Конфиденциально</a>
+                <a href="#">Условия</a>
+            </div>
+            <div class="footer-badges">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-lang">Справка и помощь</div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-vk"></i></a>
+            </div>
+        </div>
+        <div class="footer-logo-area">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaa8WBGt9SVg0iOA5MXyf6wlPtVwT-6pnhIg&s" alt="Кулак">
+            <p>Ремонт — это благородно</p>
+        </div>
+    </footer>
+</body>
+</html>
