@@ -1,9 +1,8 @@
 import datetime
-
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, func
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy.orm import mapped_column, DeclarativeBase, Mapped, relationship
-from config import settings
+from .config import settings
 
 engine = create_async_engine(settings.db_url_sqlite)
 Session_maker = async_sessionmaker(engine)
@@ -22,17 +21,19 @@ class Users(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str]
     surname: Mapped[str] = mapped_column( default="")
-    email: Mapped[str]
+    email: Mapped[str] = mapped_column(unique=True)
     phone_number: Mapped[str]
     password: Mapped[str]
-    registration_date: Mapped[datetime.date]
+    registration_date: Mapped[datetime.date] = mapped_column(server_default=func.current_date())
 
 class Goods(Base):
     __tablename__ = "Goods"
     id: Mapped[int] = mapped_column(primary_key=True)
     product_name: Mapped[str]
+    picture: Mapped[str] = mapped_column(default="")
     price_in_kopecks: Mapped[int]
     price_in_rubles: Mapped[int]
+    quantity: Mapped[int]
     description: Mapped[str]
     category: Mapped["Categories"] = relationship(back_populates="goods")
     category_id: Mapped[int] = mapped_column(ForeignKey("Categories.id"))
