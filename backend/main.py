@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from API.routers.users_router import router_Users
 from API.routers.goods_router import router_Goods
+from API.routers.categories_router import router_Categories
 from DB.db import create_all_tables, delete_all_tables
 
 @asynccontextmanager
@@ -30,6 +31,7 @@ app.add_middleware(
 
 app.include_router(router_Users)
 app.include_router(router_Goods)
+app.include_router(router_Categories)
 
 if __name__ == '__main__':
     import uvicorn

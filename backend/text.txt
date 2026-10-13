@@ -1,0 +1,15 @@
+нужно сделать:
+1. JWT система
+2. Корзина
+3. Админ апи
+4. Система количества товара
+
+
+
+{
+  "username": "Admin",
+  "surname": "Admin",
+  "email": "admin123@gmail.com",
+  "phone_number": "+78005553535",
+  "password": "Admin"
+}

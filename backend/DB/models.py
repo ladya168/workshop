@@ -21,6 +21,15 @@ class UserGetMod(BaseModel):
 
     model_config = ConfigDict(from_attributes=True)
 
+class UserAuthMod(BaseModel):
+    username: str
+    surname: str | None
+    email: EmailStr
+    phone_number: PhoneNumber
+
+    model_config = ConfigDict(from_attributes=True)
+
+
 
 class UserAddMod(BaseModel):
     username: str
@@ -49,10 +58,11 @@ class CategoryMod(BaseModel):
 class GoodsMod(BaseModel):
     product_name: str
     picture: str
-    price_in_kopecks: int
-    price_in_rubles: int
+    price: float
+    quantity: int = 1
     description: str
     category_id: int
+
 
 
 class CategoryInGoodsResponse(BaseModel):
@@ -68,8 +78,8 @@ class GoodsGetMod(BaseModel):
 
     product_name: str
     picture: str
-    price_in_kopecks: int
-    quantity: int
+    price: float
+    quantity: int = 1
     description: str
     category: CategoryInGoodsResponse
 
@@ -80,5 +90,6 @@ class GoodsGetMiniMod(BaseModel):
     id: int
     product_name: str
     picture: str
-    price_in_rubles: int
+    price: float
     category: CategoryInGoodsResponse
+

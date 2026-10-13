@@ -1,6 +1,6 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import joinedload
+from sqlalchemy.orm import joinedload, load_only
 from ..models import  GoodsGetMiniMod, GoodsGetMod, GoodsMod
 from ..db import Goods 
 
@@ -23,13 +23,14 @@ class GoodsRepository:
         return query.id
 
     async def get_all_products_mini(self):
-        query = select(Goods.id,
-                       Goods.product_name,
-                       Goods.picture,
-                       Goods.price_in_rubles, 
-                       Goods.category).options(joinedload(Goods.category))
-        result = self.session.execute(query)
-        db_products = result.scalars().all()
+        query = select(Goods).options(load_only(Goods.id,
+                    Goods.product_name,
+                    Goods.picture,
+                    Goods.price)).options(joinedload(Goods.category))
+
+        result = await self.session.execute(query)
+
+        db_products = result.scalars().unique().all()
 
         return [
         GoodsGetMiniMod.model_validate(product)
@@ -41,7 +42,7 @@ class GoodsRepository:
             Goods
         ).options(joinedload(Goods.category)).where(Goods.id == product_id)
 
-        result = self.session.execute(query)
+        result = await self.session.execute(query)
         db_product = result.scalar_one_or_none()
 
         if not db_product:
